@@ -1,0 +1,133 @@
+:root {
+  --bg-color: #f9f8ff;
+  --text-color: #222;
+  --card-color: #ffffff;
+  --accent-color: #ff4081;
+  --accent-gradient: linear-gradient(135deg, #ff4081, #ff80ab);
+  --shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+body.dark {
+  --bg-color: #121212;
+  --text-color: #f0f0f0;
+  --card-color: #1e1e2f;
+  --accent-color: #ff80ab;
+  --accent-gradient: linear-gradient(135deg, #ff4081, #e040fb);
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: all 0.3s ease;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: var(--accent-gradient);
+  color: white;
+  box-shadow: var(--shadow);
+}
+
+.header h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+nav input {
+  padding: 0.6rem;
+  border: none;
+  border-radius: 8px;
+  width: 200px;
+}
+
+nav button {
+  margin-left: 10px;
+  padding: 0.6rem 1rem;
+  background-color: #ffffff;
+  color: var(--accent-color);
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+nav button:hover {
+  background-color: var(--accent-color);
+  color: #fff;
+}
+
+.hero, .filters, .seasonal {
+  padding: 2rem;
+  animation: fadeIn 1s ease forwards;
+}
+
+.carousel, .anime-grid, .genre-buttons {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.anime-card {
+  background: var(--card-color);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  padding: 1.2rem;
+  text-align: center;
+  font-weight: bold;
+  color: var(--text-color);
+  min-width: 150px;
+  cursor: pointer;
+  transition: 0.3s;
+  background-image: linear-gradient(145deg, rgba(255,64,129,0.1), rgba(255,255,255,0.1));
+}
+
+.anime-card:hover {
+  transform: translateY(-5px) scale(1.05);
+  background-image: var(--accent-gradient);
+  color: white;
+}
+
+.genre-buttons button {
+  background: var(--accent-gradient);
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 25px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.genre-buttons button:hover {
+  transform: scale(1.1);
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #2a2a2a;
+  color: white;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+} .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
